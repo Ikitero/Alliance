@@ -1,0 +1,23 @@
+﻿@model TemplateViewModel
+
+<form method="post"
+      data-ajax="true"
+      data-ajax-method="post"
+      data-ajax-complete="add">
+    <select id="template" asp-for="Slug" name="List.Test">
+        <option value="_ItemCard">Gallery Item</option>
+        <option value="_Licenses">Licenses Item</option>
+        <option value="_ProjectItem">Project Item</option>
+    </select>
+    <input id="test" type="button" value="Choose template" onclick="loadTemplate()" />
+</form>
+
+<form method="post"
+      data-ajax="true"
+      onsubmit="collectObjects()"
+      data-ajax-method="post"
+      data-ajax-complete="add">
+    <div id="UserContent" asp-validation-summary="All">
+    </div>
+    <input type="button" value="Add to db!" onclick="collectObjects()"/>
+</form>

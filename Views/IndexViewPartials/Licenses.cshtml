@@ -1,0 +1,19 @@
+﻿@model TemplateViewModel
+<!-- LICENCES -->
+<div class="licences">
+    <div class="container">
+        <div class="licences__inner d-flex">
+            <div class="licences__about">
+                <h3 class="licences__title">@Model.MainHeader</h3>
+                <p class="licences__text">@Model.Description</p>
+            </div>
+            <div class="licences__gallery d-flex">
+                @foreach (var img in Model.ImageUrl)
+                {
+                    <a data-fancybox="gallery"><img src="@img" /></a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END LICENCES  -->

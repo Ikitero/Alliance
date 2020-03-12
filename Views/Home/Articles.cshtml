@@ -1,0 +1,69 @@
+﻿@model IEnumerable<TemplateViewModel>
+<!--CHAIN-->
+<div class="chain">
+    <div class="container">
+        <div class="chain__inner">
+            <p>Главная / <span>Статьи</span></p>
+        </div>
+    </div>
+</div>
+<!--CHAIN-->
+<!--SWIPER-->
+<div class="swiper">
+    <div class="container">
+        <div class="article__header">
+            <h2>Сатьи СТ Альянс </h2>
+            <p>Узучайте полезную информацию</p>
+        </div>
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="infogallery__inner d-flex">
+                        <!-- ITEM -->
+                        <div class="infogallery__card">
+                            <div class="infogallery__blur">
+                                <div class="infogallery__text d-flex">
+                                    <div class="info-wrap">
+                                        <h2 class="card__title">Кадастровые работы</h2>
+                                        <p class="card__text">
+                                            Стоимость работ рассчитывается индивидуально
+                                        </p>
+                                    </div>
+                                    <p class="card__price">ОТ 350,00 РУБЛЕЙ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END ITEM -->
+                        
+                    </div>
+                </div>
+               
+            </div>
+            <!-- If we need pagination -->
+            <div class="navigation-wrap">
+                <div class="swiper-pagination " onclick="currentSlide()"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="arrows-wrap">
+                    <div class="arrow-box">
+                        <div class="swiper-button-first disabled" id="left-arrows" onclick="mySwiper.slideTo(0);">
+                        </div>
+                        <div class="swiper-button-prev" id="button-prev"></div>
+                        <div class="swiper-button-next" id="button-next"></div>
+                        <div class="swiper-button-last" id="right-arrows"
+                             onclick="mySwiper.slideTo(mySwiper.slides.length - 1);">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<!--SWIPER-->

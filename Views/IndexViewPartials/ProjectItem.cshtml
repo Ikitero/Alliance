@@ -1,0 +1,11 @@
+﻿@model TemplateViewModel
+
+<div class="projects__card" style="background:@Model.ImageUrl.First(); background-size: cover;">
+    <div class="background__blur">
+        <div class="projects__hover d-flex">
+            <h2 class="card__title">@Model.MainHeader</h2>
+            <p class="card__text">@Model.SubHeader</p>
+            <p class="card__price">@Model.RegularPrice</p>
+        </div>
+    </div>
+</div>

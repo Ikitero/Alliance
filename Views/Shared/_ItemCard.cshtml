@@ -1,0 +1,10 @@
+﻿@model TemplateViewModel
+
+<form method="post" class="active" name="@Model.Slug">
+    <input type="hidden" name="Slug" value="@Model.Slug" />
+    <label>Main header</label><br />
+    <input name="MainHeader" /><br />
+    <label>Short Description</label><br />
+    <input name="ShortDescription" /><br />
+    <a class="remove_block" href="#">Remove</a>
+</form>

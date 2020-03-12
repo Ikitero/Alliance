@@ -1,0 +1,41 @@
+﻿@model TemplateViewModel
+<!--CHAIN-->
+<div class="chain">
+    <div class="container">
+        <div class="chain__inner">
+            <p>Главная / Статьи / <span>@Model.MainHeader</span></p>
+        </div>
+    </div>
+</div>
+<!--CHAIN-->
+<!-- article image -->
+
+<div class="article">
+    <div class="container">
+        <!-- ITEM -->
+        <div class="infogallery__card max-width-none" style="background-image : @Model.ImageUrl.First()">
+            <div class="infogallery__blur">
+                <div class="infogallery__text d-flex">
+                    <div class="info-wrap d-flex">
+                        <h2 class="card__title">@Model.MainHeader</h2>
+                        <p class="card__text">@Model.SubHeader</p>
+                    </div>
+                    <p class="card__price">@Model.Category</p>
+                </div>
+            </div>
+        </div>
+        <!-- END ITEM -->
+    </div>
+</div>
+
+<!-- article info -->
+<div class="info">
+    <div class="container">
+        <div class="info__content">
+
+
+            <h2 class="info__title">@Model.MainHeader</h2>
+            <p class="info__text">@Model.Description</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+﻿@model IEnumerable<TemplateViewModel>
+@{
+    ViewData["Title"] = "ALLIANCE";
+}
+<!-- TITLE-->
+<div class="title">
+    <div class="container">
+        <div class="title__inner">
+            <h1>Кадастровые работы СОГЛАСОВАНИЕ В КГА Санкт-Петербурга</h1>
+        </div>
+    </div>
+</div>
+<!-- TITLE END-->
+
+<!-- GALLERY-->
+<div class="infogallery">
+    <div class="container">
+        <div class="infogallery__inner d-flex">
+            @foreach (var record in Model)
+            {
+                @if (record.Slug != "_ItemCard")
+                    continue;
+                <div class="infogallery__card">
+                    <div class="infogallery__blur">
+                        <div class="infogallery__text d-flex">
+                            <div class="info-wrap">
+                                <h2 class="card__title">@record.MainHeader</h2>
+                                <p class="card__text">@record.ShortDescription</p>
+                            </div>
+                            <p class="card__price">@record.RegularPrice</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- GALLERY END -->
+
+<!-- LICENCES -->
+@foreach (var record in Model)
+{
+    @if (record.Slug == "_Licenses" && record.MainHeader == "Лицензии")
+    {
+        <partial name="Licenses" model="record" />
+    }
+}
+<!-- END LICENCES  -->
+
+<!-- PROJECTS  -->
+<div class="projects">
+    <div class="container">
+        <div class="projects__header">
+            <h3 class="projects__title">Реализованные проекты</h3>
+        </div>
+
+        <div class="projects__gallery d-flex">
+            @foreach (var record in Model)
+            {
+                @if (record.Slug == "_ProjectItem")
+                {
+                    <partial name="ProjectItem" model="record" />
+                }
+            }
+        </div>
+    </div>
+</div>
+<!-- END PROJECTS  -->
+
+<!-- COMMENTS -->
+@foreach (var record in Model)
+{
+    @if (record.Slug == "_Licenses" && record.MainHeader == "Отзывы клиентов")
+    {
+        <partial name="Licenses" model="record" />
+    }
+}
+<!-- END COMMENTS  -->
